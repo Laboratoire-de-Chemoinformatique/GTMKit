@@ -12,7 +12,7 @@ from gtmkit.gtm import GTM, VanillaGTM
 from gtmkit.metrics import compute_rp_coverage, resp_to_pattern
 from gtmkit.utils.classification import class_density_to_table, get_class_density_matrix
 from gtmkit.utils.density import density_to_table, get_density_matrix
-from gtmkit.utils.molecules import calculate_mols_coords
+from gtmkit.utils.molecules import calculate_latent_coords
 from gtmkit.utils.regression import get_reg_density_matrix, reg_density_to_table
 
 
@@ -184,7 +184,7 @@ class TestGTMWorkflow:
         resp_np = responsibilities.detach().cpu().numpy().T
 
         # Calculate molecule coordinates
-        mol_coords = calculate_mols_coords(resp_np, return_node=True)
+        mol_coords = calculate_latent_coords(resp_np, return_node=True)
 
         assert isinstance(mol_coords, pd.DataFrame)
         assert len(mol_coords) == medium_dataset.shape[0]
@@ -253,7 +253,7 @@ class TestDataConsistency:
         density_table = density_to_table(density)
 
         # Calculate molecule coordinates
-        mol_coords = calculate_mols_coords(responsibilities_3x3)
+        mol_coords = calculate_latent_coords(responsibilities_3x3)
 
         # Check that coordinate ranges match
         assert density_table["x"].min() == 1

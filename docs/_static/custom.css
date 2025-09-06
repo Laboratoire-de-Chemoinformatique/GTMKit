@@ -1,0 +1,87 @@
+/* Custom CSS for GTMKit documentation */
+
+/* Improve code block styling */
+.highlight {
+    margin: 1em 0;
+    border-radius: 4px;
+}
+
+/* Better table styling */
+.rst-content table.docutils {
+    border: 1px solid #e1e4e5;
+    border-collapse: collapse;
+}
+
+.rst-content table.docutils th {
+    background-color: #f8f9fa;
+    border: 1px solid #e1e4e5;
+    padding: 8px 12px;
+}
+
+.rst-content table.docutils td {
+    border: 1px solid #e1e4e5;
+    padding: 8px 12px;
+}
+
+/* Improve admonition styling */
+.rst-content .admonition {
+    margin: 1.5625em auto;
+    border-radius: 4px;
+}
+
+/* Custom styling for API documentation */
+.rst-content dl.class > dt,
+.rst-content dl.function > dt,
+.rst-content dl.method > dt {
+    background-color: #f8f9fa;
+    border-left: 3px solid #2980b9;
+    padding: 6px 12px;
+    margin-bottom: 8px;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+/* Improve parameter list styling */
+.rst-content dl.field-list > dt {
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+/* Better spacing for code examples */
+.rst-content .literal-block-wrapper {
+    margin: 1em 0;
+}
+
+/* Improve navigation styling */
+.wy-nav-content-wrap {
+    margin-left: 300px;
+}
+
+@media screen and (max-width: 768px) {
+    .wy-nav-content-wrap {
+        margin-left: 0;
+    }
+}
+
+/* Custom styling for tutorial sections */
+.rst-content h2 {
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 4px;
+}
+
+/* Improve version warning styling */
+.rst-versions {
+    border-top: 1px solid #d9d9d9;
+}
+
+/* Better mobile responsiveness */
+@media screen and (max-width: 480px) {
+    .rst-content .highlight {
+        overflow-x: auto;
+    }
+
+    .rst-content table.docutils {
+        font-size: 0.9em;
+    }
+}

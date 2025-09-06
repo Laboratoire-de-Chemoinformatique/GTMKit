@@ -9,7 +9,7 @@ import pandas as pd
 from tqdm import tqdm
 
 
-def calculate_mols_coords(
+def calculate_latent_coords(
     responsibilities, legacy=False, correction=False, return_node=False
 ):
     """

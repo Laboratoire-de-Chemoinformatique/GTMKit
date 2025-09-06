@@ -7,48 +7,68 @@ import pandas as pd
 from gtmkit.utils.density import calculate_grid
 
 
+import pandas as pd
+from pandas.api.types import is_numeric_dtype, is_bool_dtype, is_datetime64_any_dtype, is_categorical_dtype
+
+def _infer_vega_type(series: pd.Series) -> str:
+    """
+    Infer a sensible Vega-Lite type code for Altair: 'Q', 'O', 'N', or 'T'.
+    - Numbers (except bool) -> 'Q'
+    - datetimes -> 'T'
+    - categoricals -> 'O'
+    - everything else -> 'N'
+    """
+    if is_bool_dtype(series):
+        # Bool behaves better as nominal (two categories) than quantitative
+        return "N"
+    if is_datetime64_any_dtype(series):
+        return "T"
+    if is_numeric_dtype(series):
+        return "Q"
+    if is_categorical_dtype(series):
+        # ordered categoricals are conceptually ordinal; nominal is also ok
+        return "O" if getattr(series.dtype, "ordered", False) else "N"
+    return "N"
+
+
 def altair_points_chart(
-    points_table: pd.DataFrame,
+    df,
     num_nodes: int,
-    points_size: int = 100,
-    points_opacity: float = 1,
-    points_color: str = "#228be6",
-    coloring_column: str = None,
-    coloring_scheme: str = "set1",
-    tooltip_columns: dict = None,
-    title="",
+    points_size: int = 12,
+    coloring_scheme: str = "viridis",
+    coloring_column: str = "color",
+    legend=None,
+    color_type: str = "auto",   # NEW: 'auto' | 'Q' | 'O' | 'N' | 'T'
 ):
-    axis_len = int(np.sqrt(num_nodes))
+    import altair as alt
+    axis_len = int(num_nodes ** 0.5)
 
-    if coloring_column is not None:
-        color = alt.Color(  # analogue to z axis in Plotly
-            f"{coloring_column}:O",
-            legend=alt.Legend(orient="left"),
-            scale=alt.Scale(scheme=alt.SchemeParams(name=coloring_scheme)),
-        )
-        # here we can specify color schemes, check https://vega.github.io/vega/docs/schemes/
-    else:
-        color = alt.Color()
+    # --- decide color encoding type ---
+    if color_type == "auto":
+        try:
+            inferred = _infer_vega_type(df[coloring_column])
+        except Exception:
+            inferred = "Q"
+        color_type = inferred
 
-    tooltip = []
-    if tooltip_columns is not None:
-        for name, title_name in tooltip_columns.items():
-            if name == "image":
-                tooltip.append(alt.Tooltip("image"))
-            else:
-                tooltip.append(alt.Tooltip(name, title=title_name))
+    legend_config = None if legend is None else legend
 
-    points = (
-        alt.Chart(points_table, title=title)
-        .mark_circle(size=points_size, opacity=points_opacity, color=points_color)
+    color = alt.Color(
+        f"{coloring_column}:{color_type}",
+        legend=legend_config,
+        scale=alt.Scale(scheme=coloring_scheme),
+    )
+
+    chart = (
+        alt.Chart(df)
+        .mark_point(opacity=0.9, filled=True, size=points_size)
         .encode(
-            x=alt.X(  # we have to keep them almost the same as in density chart
+            x=alt.X(
                 "x:Q",
                 title=None,
                 axis=None,
-                scale=alt.Scale(
-                    domain=[1, axis_len + 1]
-                ),  # here we have to specify min and max, as for points we have quantatitive type (ordinal will fail)
+                # centers at integers 1..N -> use 0.5..N+0.5
+                scale=alt.Scale(domain=[1, axis_len + 1]),
             ),
             y=alt.Y(
                 "y:Q",
@@ -57,10 +77,14 @@ def altair_points_chart(
                 scale=alt.Scale(domain=[1, axis_len + 1], reverse=True),
             ),
             color=color,
-            tooltip=tooltip,
+            tooltip=[
+                alt.Tooltip("x:Q"),
+                alt.Tooltip("y:Q"),
+                alt.Tooltip(f"{coloring_column}:{color_type}"),
+            ],
         )
     )
-    return points
+    return chart
 
 
 def altair_discrete_density_landscape(density_table, title=""):
@@ -88,7 +112,7 @@ def altair_discrete_density_landscape(density_table, title=""):
                 "y:O",
                 title=None,
                 axis=None,
-                scale=alt.Scale(domain=list(range(1, axis_len + 1))),
+                scale=alt.Scale(domain=list(range(1, axis_len + 1)), reverse=True),
             ),
             color=alt.Color(
                 "filtered_density:Q",
@@ -155,7 +179,7 @@ def altair_discrete_class_landscape(
                 "y:O",
                 title=None,
                 axis=None,
-                scale=alt.Scale(domain=list(range(1, axis_len + 1))),
+                scale=alt.Scale(domain=list(range(1, axis_len + 1)), reverse=True),
             ),
             color=alt.Color(
                 f"{second_class_prob_column_name}:Q",
@@ -183,8 +207,9 @@ def altair_discrete_regression_landscape(
     reverse=False,
     title="",
 ):
-    n_nodes = reg_density_table.shape[0]
-    axis_len = int(np.sqrt(n_nodes))
+    # --- minimal fix: derive grid size from table coords, not row count ---
+    # works even if reg_density_table was filtered by node_threshold
+    axis_len = int(max(reg_density_table["x"].max(), reg_density_table["y"].max()))
 
     opacity = alt.Opacity()
     if use_density:
@@ -195,6 +220,7 @@ def altair_discrete_regression_landscape(
         alt.Tooltip("density", title="Density"),
         alt.Tooltip("filtered_reg_density", title="Regression density"),
     ]
+
     if regval_domain:
         color_scale = alt.Scale(
             domain=regval_domain,
@@ -204,14 +230,13 @@ def altair_discrete_regression_landscape(
         )
     else:
         color_scale = alt.Scale(
-            scheme=alt.SchemeParams(name=colorset), type=scale_type, reverse=reverse
+            scheme=alt.SchemeParams(name=colorset),
+            type=scale_type,
+            reverse=reverse,
         )
 
     chart = (
-        alt.Chart(
-            reg_density_table,
-            title=title,
-        )
+        alt.Chart(reg_density_table, title=title)
         .mark_rect()
         .encode(
             x=alt.X(
@@ -224,7 +249,7 @@ def altair_discrete_regression_landscape(
                 "y:O",
                 title=None,
                 axis=None,
-                scale=alt.Scale(domain=list(range(1, axis_len + 1))),
+                scale=alt.Scale(domain=list(range(1, axis_len + 1)), reverse=True),
             ),
             color=alt.Color(
                 "filtered_reg_density:Q",
@@ -237,6 +262,7 @@ def altair_discrete_regression_landscape(
         )
     )
     return chart
+
 
 
 def altair_discrete_query_landscape(
