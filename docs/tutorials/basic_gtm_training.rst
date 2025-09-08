@@ -160,7 +160,7 @@ Let's visualize the latent space coordinates:
    fig, axes = plt.subplots(1, 2, figsize=(15, 6))
 
    # VanillaGTM results
-   scatter1 = axes[0].scatter(coords_vanilla[0], coords_vanilla[1], 
+   scatter1 = axes[0].scatter(coords_vanilla[0], coords_vanilla[1],
                              c=labels, cmap='viridis', alpha=0.6)
    axes[0].set_title('VanillaGTM (Random Initialization)')
    axes[0].set_xlabel('Latent Dimension 1')
@@ -168,7 +168,7 @@ Let's visualize the latent space coordinates:
    axes[0].grid(True, alpha=0.3)
 
    # GTM results
-   scatter2 = axes[1].scatter(coords_pca[0], coords_pca[1], 
+   scatter2 = axes[1].scatter(coords_pca[0], coords_pca[1],
                              c=labels, cmap='viridis', alpha=0.6)
    axes[1].set_title('GTM (PCA Initialization)')
    axes[1].set_xlabel('Latent Dimension 1')
@@ -260,16 +260,16 @@ Once trained, you can use the model to project new data:
 
    # Visualize new data with original data
    plt.figure(figsize=(10, 8))
-   
+
    # Original data
-   plt.scatter(coords_pca[0], coords_pca[1], c=labels, cmap='viridis', 
+   plt.scatter(coords_pca[0], coords_pca[1], c=labels, cmap='viridis',
                alpha=0.6, s=30, label='Training Data')
-   
+
    # New data
    new_coords = new_latent_coords.T.cpu().numpy()
-   plt.scatter(new_coords[0], new_coords[1], c='red', marker='x', 
+   plt.scatter(new_coords[0], new_coords[1], c='red', marker='x',
                s=50, label='New Data', alpha=0.8)
-   
+
    plt.xlabel('Latent Dimension 1')
    plt.ylabel('Latent Dimension 2')
    plt.title('GTM Projection: Training vs New Data')
@@ -301,11 +301,11 @@ Save and load trained models:
 
    # Load model
    loaded_state = torch.load('gtm_model.pth')
-   
+
    # Create new model with same configuration
    loaded_gtm = GTM(**loaded_state['config'])
    loaded_gtm.load_state_dict(loaded_state['state_dict'])
-   
+
    # Restore standardizer if it was used
    if loaded_state['standardizer_state']:
        from gtmkit.gtm import DataStandardizer

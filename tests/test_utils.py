@@ -299,7 +299,9 @@ class TestMoleculeUtils:
         """Test molecule coordinates with correction for visualization."""
         responsibilities = np.array([[1.0, 0.0, 0.0, 0.0]])
 
-        result_no_correction = calculate_latent_coords(responsibilities, correction=False)
+        result_no_correction = calculate_latent_coords(
+            responsibilities, correction=False
+        )
         result_with_correction = calculate_latent_coords(
             responsibilities, correction=True
         )

@@ -1,11 +1,12 @@
 # GTMKit
 
-A Python library for exploring high-dimensional data using **Generative Topographic Mapping (GTM)**.
+> Mapping high-dimensional biology & chemistry into intuitive, navigable spaces with **Generative Topographic Mapping (GTM)**.
 
 <p align="left">
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/License-MIT-brightgreen"></a>
   <img alt="Python" src="https://img.shields.io/badge/Python-3.11+-blue">
   <img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-2.7.1%2B-red">
+  <img alt="GPU" src="https://img.shields.io/badge/GPU-CUDA_Ready-9cf">
 </p>
 
 ---
@@ -477,4 +478,3 @@ This project is licensed under the MIT License — see the **LICENSE** file for 
 ## Contact
 
 Contact: [varnek@unistra.fr](mailto:varnek@unistra.fr)
-

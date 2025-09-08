@@ -3,12 +3,15 @@ from typing import List
 import altair as alt
 import numpy as np
 import pandas as pd
+from pandas.api.types import (
+    is_bool_dtype,
+    is_categorical_dtype,
+    is_datetime64_any_dtype,
+    is_numeric_dtype,
+)
 
 from gtmkit.utils.density import calculate_grid
 
-
-import pandas as pd
-from pandas.api.types import is_numeric_dtype, is_bool_dtype, is_datetime64_any_dtype, is_categorical_dtype
 
 def _infer_vega_type(series: pd.Series) -> str:
     """
@@ -38,10 +41,11 @@ def altair_points_chart(
     coloring_scheme: str = "viridis",
     coloring_column: str = "color",
     legend=None,
-    color_type: str = "auto",   # NEW: 'auto' | 'Q' | 'O' | 'N' | 'T'
+    color_type: str = "auto",  # NEW: 'auto' | 'Q' | 'O' | 'N' | 'T'
 ):
     import altair as alt
-    axis_len = int(num_nodes ** 0.5)
+
+    axis_len = int(num_nodes**0.5)
 
     # --- decide color encoding type ---
     if color_type == "auto":
@@ -262,7 +266,6 @@ def altair_discrete_regression_landscape(
         )
     )
     return chart
-
 
 
 def altair_discrete_query_landscape(
