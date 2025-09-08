@@ -147,7 +147,7 @@ class TestVanillaGTM:
         result = gtm_model.transform(sample_data)
 
         assert isinstance(result, torch.Tensor)
-        assert result.shape == (2, 50)  # (n_components, n_samples)
+        assert result.shape == torch.Size([50, 2])  # (n_samples, n_components)
         assert torch.isfinite(result).all()
 
     def test_gtm_fit_transform(self, gtm_model, sample_data):
@@ -262,7 +262,7 @@ class TestGTM:
         gtm.fit(sample_data)
         result = gtm.transform(sample_data)
 
-        assert result.shape == (2, 50)
+        assert result.shape == torch.Size([50, 2])
         assert torch.isfinite(result).all()
 
     def test_gtm_torch_pca(self, sample_data):
@@ -280,7 +280,7 @@ class TestGTM:
         gtm.fit(sample_data)
         result = gtm.transform(sample_data)
 
-        assert result.shape == (2, 50)
+        assert result.shape == torch.Size([50, 2])
         assert torch.isfinite(result).all()
 
     def test_gtm_invalid_pca_engine(self):
@@ -316,7 +316,7 @@ class TestGTM:
         gtm.fit(sample_data)
         result = gtm.transform(sample_data)
 
-        assert result.shape == (2, 50)
+        assert result.shape == torch.Size([50, 2])
 
 
 class TestEdgeCases:
@@ -336,7 +336,7 @@ class TestEdgeCases:
         # Should still work, though might not converge well
         gtm.fit(data)
         result = gtm.transform(data)
-        assert result.shape == (2, 5)
+        assert result.shape == torch.Size([5, 2])
 
     def test_single_feature(self):
         """Test GTM with single feature data."""
@@ -351,7 +351,7 @@ class TestEdgeCases:
 
         gtm.fit(data)
         result = gtm.transform(data)
-        assert result.shape == (2, 50)
+        assert result.shape == torch.Size([50, 2])
         assert torch.isfinite(result).all()
 
     def test_high_dimensional_data(self):
@@ -367,7 +367,7 @@ class TestEdgeCases:
 
         gtm.fit(data)
         result = gtm.transform(data)
-        assert result.shape == (2, 30)
+        assert result.shape == torch.Size([30, 2])
 
     def test_zero_variance_features(self):
         """Test GTM handles zero variance features."""
@@ -387,7 +387,7 @@ class TestEdgeCases:
             gtm.fit(data)
 
         result = gtm.transform(data)
-        assert result.shape == (2, 50)
+        assert result.shape == torch.Size([50, 2])
 
     def test_convergence_tolerance(self):
         """Test GTM stops early when tolerance is reached."""

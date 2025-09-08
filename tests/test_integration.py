@@ -29,7 +29,7 @@ class TestGTMWorkflow:
         transformed = gtm.fit_transform(medium_dataset)
 
         # Verify output
-        assert transformed.shape == (2, 100)  # 2D latent space, 100 samples
+        assert transformed.shape == torch.Size([100, 2])  # 100 samples, 2D latent space
         assert torch.isfinite(transformed).all()
 
         # Test projection
@@ -57,7 +57,7 @@ class TestGTMWorkflow:
         # Should work without errors
         transformed = gtm.fit_transform(medium_dataset)
 
-        assert transformed.shape == (2, 100)
+        assert transformed.shape == torch.Size([100, 2])
         assert torch.isfinite(transformed).all()
 
         # Check that PCA initialization was used
@@ -353,7 +353,7 @@ class TestScalabilityWorkflows:
         # Should work even with small data
         transformed = gtm.fit_transform(small_dataset)
 
-        assert transformed.shape == (2, small_dataset.shape[0])
+        assert transformed.shape == torch.Size([small_dataset.shape[0], 2])
         assert torch.isfinite(transformed).all()
 
     def test_high_dimensional_workflow(self, high_dim_dataset):
@@ -369,7 +369,7 @@ class TestScalabilityWorkflows:
         # Should handle high-dimensional data
         transformed = gtm.fit_transform(high_dim_dataset)
 
-        assert transformed.shape == (2, high_dim_dataset.shape[0])
+        assert transformed.shape == torch.Size([high_dim_dataset.shape[0], 2])
         assert torch.isfinite(transformed).all()
 
     def test_sparse_responsibilities_workflow(self, test_data_generator):
@@ -439,7 +439,7 @@ class TestErrorHandlingWorkflows:
         # Should handle tiny dataset (though results might not be meaningful)
         try:
             transformed = gtm.fit_transform(tiny_data)
-            assert transformed.shape == (2, 3)
+            assert transformed.shape == torch.Size([3, 2])
         except Exception as e:
             # Some configurations might not work with very small data
             assert isinstance(e, (RuntimeError, ValueError))
