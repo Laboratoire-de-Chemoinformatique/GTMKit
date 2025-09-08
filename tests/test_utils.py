@@ -21,7 +21,7 @@ from gtmkit.utils.density import (
     filter_by_threshold,
     get_density_matrix,
 )
-from gtmkit.utils.molecules import calculate_mols_coords
+from gtmkit.utils.molecules import calculate_latent_coords
 from gtmkit.utils.regression import (
     get_reg_density_matrix,
     norm_reg_density,
@@ -273,7 +273,7 @@ class TestRegressionUtils:
 class TestMoleculeUtils:
     """Test molecule coordinate calculation utilities."""
 
-    def test_calculate_mols_coords_basic(self):
+    def test_calculate_latent_coords_basic(self):
         """Test basic molecule coordinate calculation."""
         responsibilities = np.array(
             [
@@ -283,7 +283,7 @@ class TestMoleculeUtils:
             ]
         )
 
-        result = calculate_mols_coords(responsibilities)
+        result = calculate_latent_coords(responsibilities)
 
         assert isinstance(result, pd.DataFrame)
         assert len(result) == 3  # 3 molecules
@@ -295,12 +295,14 @@ class TestMoleculeUtils:
         assert result["y"].min() >= 1.0
         assert result["y"].max() <= 2.0
 
-    def test_calculate_mols_coords_with_correction(self):
+    def test_calculate_latent_coords_with_correction(self):
         """Test molecule coordinates with correction for visualization."""
         responsibilities = np.array([[1.0, 0.0, 0.0, 0.0]])
 
-        result_no_correction = calculate_mols_coords(responsibilities, correction=False)
-        result_with_correction = calculate_mols_coords(
+        result_no_correction = calculate_latent_coords(
+            responsibilities, correction=False
+        )
+        result_with_correction = calculate_latent_coords(
             responsibilities, correction=True
         )
 
@@ -314,7 +316,7 @@ class TestMoleculeUtils:
             == result_no_correction["y"].iloc[0] + 0.5
         )
 
-    def test_calculate_mols_coords_return_node(self):
+    def test_calculate_latent_coords_return_node(self):
         """Test molecule coordinates with node index return."""
         responsibilities = np.array(
             [
@@ -323,31 +325,31 @@ class TestMoleculeUtils:
             ]
         )
 
-        result = calculate_mols_coords(responsibilities, return_node=True)
+        result = calculate_latent_coords(responsibilities, return_node=True)
 
         assert "node_index" in result.columns
         assert result["node_index"].iloc[0] == 1  # Node indices are 1-based
         assert result["node_index"].iloc[1] == 4
 
-    def test_calculate_mols_coords_legacy_mode(self):
+    def test_calculate_latent_coords_legacy_mode(self):
         """Test molecule coordinates with legacy coordinate system."""
         responsibilities = np.array([[1.0, 0.0, 0.0, 0.0]])
 
-        result_normal = calculate_mols_coords(responsibilities, legacy=False)
-        result_legacy = calculate_mols_coords(responsibilities, legacy=True)
+        result_normal = calculate_latent_coords(responsibilities, legacy=False)
+        result_legacy = calculate_latent_coords(responsibilities, legacy=True)
 
         # Both should have same structure but potentially different coordinates
         assert set(result_normal.columns) == set(result_legacy.columns)
         assert len(result_normal) == len(result_legacy)
 
-    def test_calculate_mols_coords_9_nodes(self):
+    def test_calculate_latent_coords_9_nodes(self):
         """Test molecule coordinates with 3x3 grid."""
         responsibilities = np.random.rand(5, 9)  # 5 molecules, 9 nodes
         responsibilities = responsibilities / responsibilities.sum(
             axis=1, keepdims=True
         )
 
-        result = calculate_mols_coords(responsibilities)
+        result = calculate_latent_coords(responsibilities)
 
         assert len(result) == 5
         # Coordinates should be in range [1, 3] for 3x3 grid
@@ -427,7 +429,7 @@ class TestUtilsIntegration:
         grid_table = calculate_grid(density)
 
         # Get coordinates from molecule calculation
-        mol_coords = calculate_mols_coords(responsibilities)
+        mol_coords = calculate_latent_coords(responsibilities)
 
         # First node should have same coordinates
         first_node_grid = grid_table.iloc[0]

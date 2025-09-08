@@ -751,7 +751,7 @@ class VanillaGTM(BaseGTM, ABC):
         """
         responsibilities, _ = self.project(data)
         # Return the mean of the posterior distribution
-        return (responsibilities.T @ self.nodes).T
+        return responsibilities.T @ self.nodes
 
     def fit_transform(self, data: torch.Tensor) -> torch.Tensor:
         """

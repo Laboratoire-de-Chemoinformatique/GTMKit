@@ -26,6 +26,8 @@
 * [Quick Start](#quick-start)
 
   * [Basic GTM Training](#basic-gtm-training)
+  * [Complete Example: S-curve Analysis](#complete-example-s-curve-analysis)
+  * [Running the Tutorial](#running-the-tutorial)
   * [Creating Density Landscapes](#creating-density-landscapes)
   * [Classification Landscapes](#classification-landscapes)
   * [Regression Landscapes](#regression-landscapes)
@@ -101,11 +103,12 @@ GTMKit is a comprehensive Python library for exploring chemical space and high-d
 * Altair ≥ 5.5.0
 * Plotly ≥ 6.3.0
 * tqdm ≥ 4.67.1
+* matplotlib ≥ 3.7.0 (for tutorials)
 
 ### Using PDM (Recommended)
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/your-username/GTMKit.git
 cd GTMKit
 pdm install
 ```
@@ -113,7 +116,15 @@ pdm install
 ### Using pip
 
 ```bash
-pip install numpy>=2.3.2 torch>=2.7.1 pandas>=2.3.2 altair>=5.5.0 plotly>=6.3.0 scikit-learn>=1.7.1 tqdm>=4.67.1
+git clone <repository-url>
+cd GTMKit
+pip install -e .
+```
+
+Or install dependencies manually:
+
+```bash
+pip install numpy>=2.3.2 torch>=2.7.1 pandas>=2.3.2 altair>=5.5.0 plotly>=6.3.0 scikit-learn>=1.7.1 tqdm>=4.67.1 matplotlib>=3.7.0
 ```
 
 > \[!NOTE]
@@ -151,93 +162,112 @@ responsibilities, log_likelihoods = gtm.project(data)
 print(f"Responsibilities shape: {responsibilities.shape}")  # (100, 1000)
 ```
 
-### Creating Density Landscapes
+### Complete Example: S-curve Analysis
+
+This example demonstrates the full workflow using synthetic S-curve data (adapted from `tutorials/Synthetic_data.ipynb`):
 
 ```python
+import os
 import numpy as np
-from gtmkit.utils.density import get_density_matrix, density_to_table
-from gtmkit.plots.plotly_landscapes import plotly_smooth_density_landscape
+import torch
+import altair as alt
+from sklearn.datasets import make_s_curve
 
-# Calculate density matrix
-responsibilities_np = responsibilities.T.cpu().numpy()  # Convert to numpy
-density = get_density_matrix(responsibilities_np)
-
-# Create density table for visualization
-density_table = density_to_table(density, node_threshold=0.1)
-
-# Generate interactive Plotly landscape
-fig = plotly_smooth_density_landscape(
-    density_table,
-    title="GTM Density Landscape",
-    node_threshold=0.1
-)
-fig.show()
-```
-
-### Classification Landscapes
-
-```python
-from gtmkit.utils.classification import get_class_density_matrix, class_density_to_table
-from gtmkit.plots.plotly_landscapes import plotly_discrete_class_landscape
-
-# Sample binary classification labels
-class_labels = np.random.choice([0, 1], size=1000)
-class_names = ["Inactive", "Active"]
-
-# Calculate class density matrices
-density, class_density, class_prob = get_class_density_matrix(
-    responsibilities_np,
-    class_labels,
-    class_name=class_names,
-    normalize=True
-)
-
-# Create classification table
-class_table = class_density_to_table(
-    density, class_density, class_prob,
-    node_threshold=0.0,  # Set to 0 for Plotly visualization
-    class_name=class_names,
-    normalized=True
-)
-
-# Generate classification landscape
-fig = plotly_discrete_class_landscape(
-    class_table,
-    title="GTM Classification Landscape",
-    first_class_label="Inactive",
-    second_class_label="Active",
-    min_density=0.1
-)
-fig.show()
-```
-
-### Regression Landscapes
-
-```python
+# GTM and utilities
+from gtmkit.gtm import GTM
+from gtmkit.utils.molecules import calculate_latent_coords
 from gtmkit.utils.regression import get_reg_density_matrix, reg_density_to_table
-from gtmkit.plots.plotly_landscapes import plotly_smooth_regression_landscape
-
-# Sample regression values
-regression_values = np.random.normal(5.0, 2.0, size=1000)
-
-# Calculate regression density matrix
-density, reg_density = get_reg_density_matrix(responsibilities_np, regression_values)
-
-# Create regression table
-reg_table = reg_density_to_table(
-    density, reg_density,
-    node_threshold=0.0  # Set to 0 for Plotly visualization
+from gtmkit.plots.altair_landscapes import (
+    altair_points_chart,
+    altair_discrete_regression_landscape,
 )
 
-# Generate regression landscape
-fig = plotly_smooth_regression_landscape(
+# 1. Create S-curve dataset
+rng = np.random.RandomState(0)
+n_samples = 5000
+s_curve_3d, s_curve_color = make_s_curve(n_samples, random_state=rng)
+
+# Add extra dimension and convert to tensor
+extra_dims = rng.randn(n_samples, 1)
+X = np.hstack([s_curve_3d, extra_dims])
+device = "cuda" if torch.cuda.is_available() else "cpu"
+X_t = torch.tensor(X, dtype=torch.float64, device=device)
+
+# 2. Fit GTM model
+gtm = GTM(
+    num_nodes=225,             # 15 x 15 grid
+    num_basis_functions=100,   # 10 x 10 RBF centers
+    basis_width=1.0,
+    reg_coeff=1.0,
+    device=device,
+    standardize=False,
+    pca_scale=True,
+    pca_engine="torch",
+    max_iter=200,
+)
+gtm.fit(X_t)
+
+# 3. Transform data and create visualizations
+Z = gtm.transform(X_t)  # Latent coordinates
+responsibilities, _ = gtm.project(X_t)
+R_np = responsibilities.detach().to("cpu").numpy()
+if R_np.shape[0] != n_samples:
+    R_np = R_np.T
+
+# 4. Create regression landscape using curve parameter as target
+density, reg_density = get_reg_density_matrix(R_np, s_curve_color)
+reg_table = reg_density_to_table(density, reg_density, node_threshold=0.10)
+
+# 5. Generate visualizations
+coords = calculate_latent_coords(R_np, correction=True, return_node=True)
+coords["color"] = s_curve_color
+
+# Create points and landscape charts
+points_chart = altair_points_chart(
+    coords.sample(min(5000, len(coords)), random_state=0),
+    num_nodes=15,  # sqrt(225)
+    points_size=120,
+    coloring_scheme='viridis',
+    coloring_column='color'
+)
+
+reg_chart = altair_discrete_regression_landscape(
     reg_table,
     title="GTM Regression Landscape",
-    regression_label="Property Value",
-    min_density=0.1
+    colorset='viridis'
 )
-fig.show()
+
+# Combine and save
+combined = alt.hconcat(points_chart, reg_chart).properties(
+    title="Latent points (colored by target) — GTM Regression Landscape"
+)
+
+# Save visualization
+os.makedirs("plots", exist_ok=True)
+combined.save("plots/gtm_scurve_regression.html")
+print("Saved visualization to plots/gtm_scurve_regression.html")
 ```
+
+### Running the Tutorial
+
+To run the complete tutorial notebook:
+
+```bash
+# Using PDM
+pdm run jupyter notebook tutorials/Synthetic_data.ipynb
+
+# Or with pip installation
+jupyter notebook tutorials/Synthetic_data.ipynb
+```
+
+The tutorial demonstrates:
+1. **Data preparation**: Creating synthetic S-curve data with additional noise dimensions
+2. **GTM training**: Fitting a 15×15 grid GTM with 10×10 RBF centers
+3. **Visualization**: Both matplotlib 3D/2D plots and interactive Altair landscapes
+4. **Regression analysis**: Using the intrinsic curve parameter as regression target
+5. **Interactive landscapes**: Generating HTML visualizations saved to `plots/`
+
+
 
 ---
 
@@ -265,10 +295,10 @@ print(f"Weighted coverage: {coverage:.3f}")
 ### Molecular Coordinate Calculation
 
 ```python
-from gtmkit.utils.molecules import calculate_mols_coords
+from gtmkit.utils.molecules import calculate_latent_coords
 
 # Calculate molecular coordinates for plotting
-mol_coords = calculate_mols_coords(
+mol_coords = calculate_latent_coords(
     responsibilities_np,
     correction=True,  # Adjust for visualization
     return_node=True  # Include most responsible node
@@ -310,20 +340,20 @@ combined.show()
 
 ### GTM Parameters
 
-* **num\_nodes**: Number of latent space grid nodes (must be perfect square for 2D)
-* **num\_basis\_functions**: Number of RBF centers (must be perfect square for 2D)
-* **basis\_width**: RBF width parameter (controls smoothness)
-* **reg\_coeff**: Regularization coefficient (prevents overfitting)
+* **num_nodes**: Number of latent space grid nodes (must be perfect square for 2D)
+* **num_basis_functions**: Number of RBF centers (must be perfect square for 2D)
+* **basis_width**: RBF width parameter (controls smoothness)
+* **reg_coeff**: Regularization coefficient (prevents overfitting)
 * **standardize**: Whether to standardize input data (recommended: True)
-* **max\_iter**: Maximum EM algorithm iterations
+* **max_iter**: Maximum EM algorithm iterations
 * **tolerance**: Convergence tolerance
 * **device**: Computation device ("cpu" or "cuda")
 
 ### PCA Initialization Options (GTM class)
 
-* **pca\_engine**: PCA implementation ("sklearn" or "torch")
-* **pca\_scale**: Scale eigenvectors by sqrt of eigenvalues
-* **pca\_lowrank**: Use low-rank PCA approximation for large datasets
+* **pca_engine**: PCA implementation ("sklearn" or "torch")
+* **pca_scale**: Scale eigenvectors by sqrt of eigenvalues
+* **pca_lowrank**: Use low-rank PCA approximation for large datasets
 
 ---
 
@@ -334,13 +364,11 @@ combined.show()
 * **`gtm.py`**: Main GTM implementations (`BaseGTM`, `VanillaGTM`, `GTM`)
 * **`metrics.py`**: RP fingerprints and coverage metrics
 * **`utils/`**: Specialized analysis modules
-
   * `classification.py`: Binary/multi-class analysis
   * `regression.py`: Continuous property analysis
   * `density.py`: Density calculations and grid mapping
   * `molecules.py`: Molecular coordinate calculations
 * **`plots/`**: Visualization modules
-
   * `plotly_landscapes.py`: Interactive smooth heatmaps
   * `altair_landscapes.py`: Static discrete visualizations
 
@@ -380,14 +408,6 @@ pdm run pytest tests/ --cov=src/gtmkit --cov-report=html
 ---
 
 ## Development
-
-### Contributors
-
-* Tagir Akhemtshin
-* Louis Plyer
-* Alexey Orlov
-* Alexandre Varnek
-
 
 ### Contributing
 
