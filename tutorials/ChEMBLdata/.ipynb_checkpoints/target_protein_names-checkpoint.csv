@@ -1,0 +1,817 @@
+CHEMBL4235,11-beta-hydroxysteroid dehydrogenase 1
+CHEMBL3910,11-beta-hydroxysteroid dehydrogenase 1
+CHEMBL3746,11-beta-hydroxysteroid dehydrogenase 2
+CHEMBL2439944,2-acylglycerol O-acyltransferase 2
+CHEMBL2534,3-phosphoinositide dependent protein kinase-1
+CHEMBL1861,4-hydroxyphenylpyruvate dioxygenase
+CHEMBL4550,5-lipoxygenase activating protein
+CHEMBL4263,Acetolactate synthase
+CHEMBL4829,Acetyl-CoA carboxylase 2
+CHEMBL3198,Acetylcholinesterase
+CHEMBL3199,Acetylcholinesterase
+CHEMBL4768,Acetylcholinesterase
+CHEMBL220,Acetylcholinesterase
+CHEMBL4078,Acetylcholinesterase
+CHEMBL285,Acyl coenzyme A:cholesterol acyltransferase 1
+CHEMBL2782,Acyl coenzyme A:cholesterol acyltransferase 1
+CHEMBL4465,Acyl coenzyme A:cholesterol acyltransferase 2
+CHEMBL5555,Acyl-CoA desaturase
+CHEMBL5424,Acyl-CoA desaturase 1
+CHEMBL5353,Acyl-CoA desaturase 1
+CHEMBL6141,Acyl-CoA:cholesterol acyltransferase
+CHEMBL3706,ADAM17
+CHEMBL318,Adenosine A1 receptor
+CHEMBL226,Adenosine A1 receptor
+CHEMBL2304404,Adenosine A1 receptor
+CHEMBL4975,Adenosine A1 receptor
+CHEMBL302,Adenosine A2a receptor
+CHEMBL251,Adenosine A2a receptor
+CHEMBL255,Adenosine A2b receptor
+CHEMBL256,Adenosine A3 receptor
+CHEMBL2966,Adenosine deaminase
+CHEMBL3589,Adenosine kinase
+CHEMBL5983,Aldo-keto reductase family 1 member B10
+CHEMBL4681,Aldo-keto-reductase family 1 member C3
+CHEMBL4559,Aldose reductase
+CHEMBL1900,Aldose reductase
+CHEMBL3081,Aldose reductase
+CHEMBL2622,Aldose reductase
+CHEMBL4247,ALK tyrosine kinase receptor
+CHEMBL5979,"Alkaline phosphatase, tissue-nonspecific isozyme"
+CHEMBL319,Alpha-1a adrenergic receptor
+CHEMBL4892,Alpha-1a adrenergic receptor
+CHEMBL229,Alpha-1a adrenergic receptor
+CHEMBL315,Alpha-1b adrenergic receptor
+CHEMBL232,Alpha-1b adrenergic receptor
+CHEMBL223,Alpha-1d adrenergic receptor
+CHEMBL326,Alpha-1d adrenergic receptor
+CHEMBL4744,Alpha-2a adrenergic receptor
+CHEMBL1867,Alpha-2a adrenergic receptor
+CHEMBL1942,Alpha-2b adrenergic receptor
+CHEMBL1916,Alpha-2c adrenergic receptor
+CHEMBL3437,"Amine oxidase, copper containing"
+CHEMBL2590,Aminopeptidase N
+CHEMBL4045,"AMP-activated protein kinase, alpha-1 subunit"
+CHEMBL2487,Amyloid-beta A4 protein
+CHEMBL2243,Anandamide amidohydrolase
+CHEMBL3229,Anandamide amidohydrolase
+CHEMBL3072,Androgen Receptor
+CHEMBL1871,Androgen Receptor
+CHEMBL3948,Angiotensin II type 1a (AT-1a) receptor
+CHEMBL3374,Angiotensin II type 1a (AT-1a) receptor
+CHEMBL4607,Angiotensin II type 2 (AT-2) receptor
+CHEMBL257,Angiotensin II type 2 (AT-2) receptor
+CHEMBL1808,Angiotensin-converting enzyme
+CHEMBL4074,Angiotensin-converting enzyme
+CHEMBL2625,Angiotensin-converting enzyme
+CHEMBL4372,Anthrax lethal factor
+CHEMBL4860,Apoptosis regulator Bcl-2
+CHEMBL3309111,Apoptosis regulator Bcl-2
+CHEMBL4625,Apoptosis regulator Bcl-X
+CHEMBL2903,Arachidonate 15-lipoxygenase
+CHEMBL4358,Arachidonate 15-lipoxygenase
+CHEMBL312,Arachidonate 5-lipoxygenase
+CHEMBL215,Arachidonate 5-lipoxygenase
+CHEMBL5393,ATP-binding cassette sub-family G member 2
+CHEMBL1293292,ATP-sensitive inward rectifier potassium channel 1
+CHEMBL3691,Autotaxin
+CHEMBL3309112,Bcl-2-like protein 1
+CHEMBL2525,Beta secretase 2
+CHEMBL5471,Beta-1 adrenergic receptor
+CHEMBL213,Beta-1 adrenergic receptor
+CHEMBL3252,Beta-1 adrenergic receptor
+CHEMBL210,Beta-2 adrenergic receptor
+CHEMBL5414,Beta-2 adrenergic receptor
+CHEMBL246,Beta-3 adrenergic receptor
+CHEMBL3482,Beta-galactosidase
+CHEMBL2179,Beta-glucocerebrosidase
+CHEMBL2725,Beta-lactamase
+CHEMBL2026,Beta-lactamase AmpC
+CHEMBL2065,Beta-lactamase TEM
+CHEMBL4822,Beta-secretase 1
+CHEMBL2047,Bile acid receptor FXR
+CHEMBL1075140,Bombesin receptor subtype-3
+CHEMBL3898,Bone morphogenetic protein 1
+CHEMBL5192,Botulinum neurotoxin type A
+CHEMBL4308,Bradykinin B1 receptor
+CHEMBL4111,Bradykinin B2 receptor
+CHEMBL3157,Bradykinin B2 receptor
+CHEMBL1163125,Bromodomain-containing protein 4
+CHEMBL1914,Butyrylcholinesterase
+CHEMBL5077,Butyrylcholinesterase
+CHEMBL2413,C-C chemokine receptor type 1
+CHEMBL4015,C-C chemokine receptor type 2
+CHEMBL3473,C-C chemokine receptor type 3
+CHEMBL2414,C-C chemokine receptor type 4
+CHEMBL274,C-C chemokine receptor type 5
+CHEMBL2276,c-Jun N-terminal kinase 1
+CHEMBL4179,c-Jun N-terminal kinase 2
+CHEMBL2637,c-Jun N-terminal kinase 3
+CHEMBL4441,C-X-C chemokine receptor type 3
+CHEMBL2107,C-X-C chemokine receptor type 4
+CHEMBL2373,C5a anaphylatoxin chemotactic receptor
+CHEMBL3798,Calcitonin gene-related peptide type 1 receptor
+CHEMBL1781862,Calmodulin-domain protein kinase 1
+CHEMBL3891,Calpain 1
+CHEMBL4062,Calpain 1
+CHEMBL4143,Calpain 2
+CHEMBL2382,Calpain 2
+CHEMBL4121,CaM kinase II beta
+CHEMBL2801,CaM kinase II delta
+CHEMBL3829,CaM kinase II gamma
+CHEMBL6140,"cAMP and cAMP-inhibited cGMP 3',5'-cyclic phosphodiesterase 10A"
+CHEMBL4101,cAMP-dependent protein kinase alpha-catalytic subunit
+CHEMBL218,Cannabinoid CB1 receptor
+CHEMBL3571,Cannabinoid CB1 receptor
+CHEMBL253,Cannabinoid CB2 receptor
+CHEMBL5973,Carbonic anhydrase 15
+CHEMBL261,Carbonic anhydrase I
+CHEMBL205,Carbonic anhydrase II
+CHEMBL2885,Carbonic anhydrase III
+CHEMBL3729,Carbonic anhydrase IV
+CHEMBL281,Carbonic anhydrase IV
+CHEMBL3594,Carbonic anhydrase IX
+CHEMBL4789,Carbonic anhydrase VA
+CHEMBL2326,Carbonic anhydrase VII
+CHEMBL3242,Carbonic anhydrase XII
+CHEMBL2186,Carbonic anhydrase XIII
+CHEMBL3510,Carbonic anhydrase XIV
+CHEMBL2216739,"Carnitine O-palmitoyltransferase 1, muscle isoform"
+CHEMBL3858,Carnitine palmitoyltransferase 1A
+CHEMBL3238,Carnitine palmitoyltransferase 2
+CHEMBL2793,Casein kinase I alpha
+CHEMBL2828,Casein kinase I delta
+CHEMBL2426,Casein kinase I gamma 1
+CHEMBL2543,Casein kinase I gamma 2
+CHEMBL3629,Casein kinase II alpha
+CHEMBL4801,Caspase-1
+CHEMBL2334,Caspase-3
+CHEMBL3308,Caspase-6
+CHEMBL3468,Caspase-7
+CHEMBL2372,Catechol O-methyltransferase
+CHEMBL2323,Cathepsin B
+CHEMBL4072,Cathepsin B
+CHEMBL2581,Cathepsin D
+CHEMBL4106,Cathepsin D
+CHEMBL4071,Cathepsin G
+CHEMBL268,Cathepsin K
+CHEMBL3837,Cathepsin L
+CHEMBL2954,Cathepsin S
+CHEMBL5443,Cell division cycle 7-related protein kinase
+CHEMBL5036,cGMP-dependent protein kinase
+CHEMBL4273,cGMP-dependent protein kinase 1 beta
+CHEMBL2896,cGMP-dependent protein kinase 2
+CHEMBL2871,Cholecystokinin A receptor
+CHEMBL1901,Cholecystokinin A receptor
+CHEMBL3501,Cholecystokinin A receptor
+CHEMBL2854,Cholecystokinin B receptor
+CHEMBL298,Cholecystokinin B receptor
+CHEMBL3572,Cholesteryl ester transfer protein
+CHEMBL1163116,Cholesteryl ester transfer protein
+CHEMBL5763,Cholinesterase
+CHEMBL1764946,Chromobox protein homolog 7
+CHEMBL2010636,Class 1 phosphodiesterase PDEB1
+CHEMBL3656,Coagulation factor X
+CHEMBL244,Coagulation factor X
+CHEMBL2820,Coagulation factor XI
+CHEMBL2176771,Complement factor D
+CHEMBL4649,Corticotropin releasing factor receptor 1
+CHEMBL1800,Corticotropin releasing factor receptor 1
+CHEMBL5747,CREB-binding protein
+CHEMBL3563,Cruzipain
+CHEMBL308,Cyclin-dependent kinase 1
+CHEMBL301,Cyclin-dependent kinase 2
+CHEMBL331,Cyclin-dependent kinase 4
+CHEMBL4036,Cyclin-dependent kinase 5
+CHEMBL2508,Cyclin-dependent kinase 6
+CHEMBL3116,Cyclin-dependent kinase 9
+CHEMBL2949,Cyclooxygenase-1
+CHEMBL221,Cyclooxygenase-1
+CHEMBL4102,Cyclooxygenase-2
+CHEMBL230,Cyclooxygenase-2
+CHEMBL4321,Cyclooxygenase-2
+CHEMBL1798,Cysteinyl leukotriene receptor 1
+CHEMBL5645,Cysteinyl leukotriene receptor 1
+CHEMBL4051,Cystic fibrosis transmembrane conductance regulator
+CHEMBL2693,Cystinyl aminopeptidase
+CHEMBL1908,Cytochrome P450 11B1
+CHEMBL2722,Cytochrome P450 11B2
+CHEMBL3522,Cytochrome P450 17A1
+CHEMBL1978,Cytochrome P450 19A1
+CHEMBL3356,Cytochrome P450 1A2
+CHEMBL2759,Cytochrome P450 21
+CHEMBL5141,Cytochrome P450 26A1
+CHEMBL5282,Cytochrome P450 2A6
+CHEMBL3622,Cytochrome P450 2C19
+CHEMBL3721,Cytochrome P450 2C8
+CHEMBL3397,Cytochrome P450 2C9
+CHEMBL289,Cytochrome P450 2D6
+CHEMBL340,Cytochrome P450 3A4
+CHEMBL3816,Cytosolic phospholipase A2
+CHEMBL2468,Death-associated protein kinase 3
+CHEMBL3813586,Dehydrosqualene desaturase
+CHEMBL269,Delta opioid receptor
+CHEMBL236,Delta opioid receptor
+CHEMBL3222,Delta opioid receptor
+CHEMBL6009,Diacylglycerol O-acyltransferase 1
+CHEMBL1075284,Diacylglycerol O-acyltransferase 1
+CHEMBL2575,Dihydrofolate reductase
+CHEMBL2425,Dihydrofolate reductase
+CHEMBL1681620,Dihydrofolate reductase
+CHEMBL2902,Dihydrofolate reductase
+CHEMBL4564,Dihydrofolate reductase
+CHEMBL1075051,Dihydrofolate reductase
+CHEMBL1926,Dihydrofolate reductase
+CHEMBL1809,Dihydrofolate reductase
+CHEMBL202,Dihydrofolate reductase
+CHEMBL2363,Dihydrofolate reductase
+CHEMBL3486,Dihydroorotate dehydrogenase
+CHEMBL1966,Dihydroorotate dehydrogenase
+CHEMBL3976,Dipeptidyl peptidase II
+CHEMBL284,Dipeptidyl peptidase IV
+CHEMBL4793,Dipeptidyl peptidase IX
+CHEMBL4657,Dipeptidyl peptidase VIII
+CHEMBL5122,Discoidin domain-containing receptor 2
+CHEMBL1921666,DNA gyrase subunit B
+CHEMBL1781,DNA topoisomerase I
+CHEMBL5619,DNA-(apurinic or apyrimidinic site) lyase
+CHEMBL3142,DNA-dependent protein kinase
+CHEMBL265,Dopamine D1 receptor
+CHEMBL2967,Dopamine D1 receptor
+CHEMBL2056,Dopamine D1 receptor
+CHEMBL339,Dopamine D2 receptor
+CHEMBL217,Dopamine D2 receptor
+CHEMBL3427,Dopamine D2 receptor
+CHEMBL234,Dopamine D3 receptor
+CHEMBL3138,Dopamine D3 receptor
+CHEMBL3361,Dopamine D4 receptor
+CHEMBL219,Dopamine D4 receptor
+CHEMBL1850,Dopamine D5 receptor
+CHEMBL338,Dopamine transporter
+CHEMBL238,Dopamine transporter
+CHEMBL3587,Dual specificity mitogen-activated protein kinase kinase 1
+CHEMBL4804,Dual specificity phosphatase Cdc25B
+CHEMBL4224,Dual specificity protein kinase CLK1
+CHEMBL4225,Dual specificity protein kinase CLK2
+CHEMBL4203,Dual specificity protein kinase CLK4
+CHEMBL3983,Dual specificity protein kinase TTK
+CHEMBL2635,Dual specificity protein phosphatase 3
+CHEMBL5543,Dual specificity tyrosine-phosphorylation-regulated kinase 1B
+CHEMBL2292,Dual-specificity tyrosine-phosphorylation regulated kinase 1A
+CHEMBL4376,Dual-specificity tyrosine-phosphorylation regulated kinase 2
+CHEMBL5203,dUTP pyrophosphatase
+CHEMBL3868,Ecdysone receptor
+CHEMBL5697,Egl nine homolog 1
+CHEMBL2407,Elastase 2A
+CHEMBL5080,Endothelial lipase
+CHEMBL252,Endothelin receptor ET-A
+CHEMBL4566,Endothelin receptor ET-A
+CHEMBL4130,Endothelin receptor ET-A
+CHEMBL1785,Endothelin receptor ET-B
+CHEMBL4631,Endothelin receptor ET-B
+CHEMBL3949,Endothelin receptor ET-B
+CHEMBL1849,Enoyl-[acyl-carrier-protein] reductase
+CHEMBL3994,Enoyl-[acyl-carrier-protein] reductase (FabI)
+CHEMBL4150,Enoyl-acyl-carrier protein reductase
+CHEMBL2068,Ephrin type-A receptor 2
+CHEMBL4901,Ephrin type-B receptor 3
+CHEMBL5147,Ephrin type-B receptor 4
+CHEMBL203,Epidermal growth factor receptor erbB1
+CHEMBL2409,Epoxide hydratase
+CHEMBL3181,Estradiol 17-beta-dehydrogenase 1
+CHEMBL2789,Estradiol 17-beta-dehydrogenase 2
+CHEMBL206,Estrogen receptor alpha
+CHEMBL242,Estrogen receptor beta
+CHEMBL5800,Falcipain 2
+CHEMBL1782,Farnesyl diphosphate synthase
+CHEMBL4158,Fatty acid synthase
+CHEMBL3650,Fibroblast growth factor receptor 1
+CHEMBL4142,Fibroblast growth factor receptor 2
+CHEMBL2742,Fibroblast growth factor receptor 3
+CHEMBL3973,Fibroblast growth factor receptor 4
+CHEMBL2695,Focal adhesion kinase 1
+CHEMBL3359,Formyl peptide receptor 1
+CHEMBL4422,Free fatty acid receptor 1
+CHEMBL2364165,Fusion glycoprotein F0
+CHEMBL5071,G protein-coupled receptor 44
+CHEMBL5409,G-protein coupled bile acid receptor 1
+CHEMBL5339,G-protein coupled receptor 120
+CHEMBL1293267,G-protein coupled receptor 35
+CHEMBL1075322,G-protein coupled receptor 55
+CHEMBL3714130,G-protein coupled receptor 6
+CHEMBL3714079,G-protein coupled receptor 84
+CHEMBL5445,GABA transporter 1
+CHEMBL3638360,Gag-Pol polyprotein
+CHEMBL3638344,Genome polyprotein
+CHEMBL4616,Ghrelin receptor
+CHEMBL1985,Glucagon receptor
+CHEMBL1784,Glucagon-like peptide 1 receptor
+CHEMBL2034,Glucocorticoid receptor
+CHEMBL5652,Glucose-dependent insulinotropic receptor
+CHEMBL330,Glutamate (NMDA) receptor subunit zeta 1
+CHEMBL311,Glutamate [NMDA] receptor subunit epsilon 2
+CHEMBL1918,Glutamate receptor ionotropic kainate 1
+CHEMBL3753,"Glutamate receptor ionotropic, AMPA 1"
+CHEMBL4016,"Glutamate receptor ionotropic, AMPA 2"
+CHEMBL4556,Glycine transporter 1
+CHEMBL2337,Glycine transporter 1
+CHEMBL3060,Glycine transporter 2
+CHEMBL4696,"Glycogen phosphorylase, muscle form"
+CHEMBL2850,Glycogen synthase kinase-3 alpha
+CHEMBL262,Glycogen synthase kinase-3 beta
+CHEMBL3638364,Glycogen synthase kinase-3 beta splice variant X1
+CHEMBL3988596,Glycylpeptide N-tetradecanoyltransferase
+CHEMBL3066,Gonadotropin-releasing hormone receptor
+CHEMBL1855,Gonadotropin-releasing hormone receptor
+CHEMBL5313,Heat shock factor protein 1
+CHEMBL3880,Heat shock protein HSP 90-alpha
+CHEMBL4303,Heat shock protein HSP 90-beta
+CHEMBL2889,Hematopoietic cell protein-tyrosine phosphatase 70Z-PEP
+CHEMBL3921,Heparanase
+CHEMBL2127,Hepatic lipase
+CHEMBL5375,Hepatitis C virus NS5B RNA-dependent RNA polymerase
+CHEMBL4620,Hepatitis C virus polyprotein
+CHEMBL3717,Hepatocyte growth factor receptor
+CHEMBL240,HERG
+CHEMBL3820,Hexokinase type IV
+CHEMBL231,Histamine H1 receptor
+CHEMBL3943,Histamine H1 receptor
+CHEMBL1941,Histamine H2 receptor
+CHEMBL2882,Histamine H2 receptor
+CHEMBL5076,Histamine H3 receptor
+CHEMBL4124,Histamine H3 receptor
+CHEMBL264,Histamine H3 receptor
+CHEMBL3759,Histamine H4 receptor
+CHEMBL4468,Histamine H4 receptor
+CHEMBL1923,Histidine-rich protein
+CHEMBL325,Histone deacetylase 1
+CHEMBL1937,Histone deacetylase 2
+CHEMBL1829,Histone deacetylase 3
+CHEMBL3524,Histone deacetylase 4
+CHEMBL1865,Histone deacetylase 6
+CHEMBL3192,Histone deacetylase 8
+CHEMBL2189110,Histone-lysine N-methyltransferase EZH2
+CHEMBL2632,HLA class I histocompatibility antigen A-3
+CHEMBL402,HMG-CoA reductase
+CHEMBL3247,HMG-CoA reductase
+CHEMBL4576,Homeodomain-interacting protein kinase 2
+CHEMBL1075167,Homeodomain-interacting protein kinase 4
+CHEMBL3590,Hormone sensitive lipase
+CHEMBL3771,Human herpes virus 5 capsid protein P40
+CHEMBL3471,Human immunodeficiency virus type 1 integrase
+CHEMBL243,Human immunodeficiency virus type 1 protease
+CHEMBL247,Human immunodeficiency virus type 1 reverse transcriptase
+CHEMBL2857,Human rhinovirus A protease
+CHEMBL3785,Hydroxycarboxylic acid receptor 2
+CHEMBL4685,"Indoleamine 2,3-dioxygenase"
+CHEMBL4361,Induced myeloid leukemia cell differentiation protein Mcl-1
+CHEMBL4198,Inhibitor of apoptosis protein 3
+CHEMBL3476,Inhibitor of nuclear factor kappa B kinase alpha subunit
+CHEMBL1991,Inhibitor of nuclear factor kappa B kinase beta subunit
+CHEMBL3529,Inhibitor of nuclear factor kappa B kinase epsilon subunit
+CHEMBL1822,Inosine-5'-monophosphate dehydrogenase 1
+CHEMBL2002,Inosine-5'-monophosphate dehydrogenase 2
+CHEMBL6145,"Inosine-5'-monophosphate dehydrogenase, probable"
+CHEMBL1981,Insulin receptor
+CHEMBL1957,Insulin-like growth factor I receptor
+CHEMBL278,Integrin alpha-4
+CHEMBL3070,Intercellular adhesion molecule-1
+CHEMBL3357,Interleukin-1 receptor-associated kinase 1
+CHEMBL3778,Interleukin-1 receptor-associated kinase 4
+CHEMBL4029,Interleukin-8 receptor A
+CHEMBL2434,Interleukin-8 receptor B
+CHEMBL2007625,Isocitrate dehydrogenase [NADP] cytoplasmic
+CHEMBL237,Kappa opioid receptor
+CHEMBL3952,Kappa opioid receptor
+CHEMBL4581,Kinesin-like protein 1
+CHEMBL3593,Lanosterol synthase
+CHEMBL3514,LDL-associated phospholipase A2
+CHEMBL1075104,Leucine-rich repeat serine/threonine-protein kinase 2
+CHEMBL3243,Leukocyte common antigen
+CHEMBL248,Leukocyte elastase
+CHEMBL5627,Leukocyte tyrosine kinase receptor
+CHEMBL4618,Leukotriene A4 hydrolase
+CHEMBL3911,Leukotriene B4 receptor 1
+CHEMBL3836,LIM domain kinase 1
+CHEMBL4227,Lipoxin A4 receptor
+CHEMBL5567,Luciferin 4-monooxygenase
+CHEMBL2808,LXR-alpha
+CHEMBL4093,LXR-beta
+CHEMBL5896,Lysine-specific demethylase 4A
+CHEMBL6175,Lysine-specific demethylase 4C
+CHEMBL6136,Lysine-specific histone demethylase 1
+CHEMBL1255149,Lysosomal Pro-X carboxypeptidase
+CHEMBL3714029,Lysyl oxidase homolog 2
+CHEMBL1844,Macrophage colony stimulating factor receptor
+CHEMBL2689,Macrophage-stimulating protein receptor
+CHEMBL4698,Malonyl-CoA decarboxylase
+CHEMBL3385,MAP kinase ERK1
+CHEMBL4040,MAP kinase ERK2
+CHEMBL2336,MAP kinase p38 alpha
+CHEMBL260,MAP kinase p38 alpha
+CHEMBL3961,MAP kinase p38 beta
+CHEMBL2939,MAP kinase p38 delta
+CHEMBL4674,MAP kinase p38 gamma
+CHEMBL4204,MAP kinase signal-integrating kinase 2
+CHEMBL2208,MAP kinase-activated protein kinase 2
+CHEMBL3094,MAP kinase-activated protein kinase 5
+CHEMBL4718,MAP kinase-interacting serine/threonine-protein kinase MNK1
+CHEMBL3831,MAP/microtubule affinity-regulating kinase 2
+CHEMBL5754,MAP/microtubule affinity-regulating kinase 4
+CHEMBL4578,Maternal embryonic leucine zipper kinase
+CHEMBL280,Matrix metalloproteinase 13
+CHEMBL3869,Matrix metalloproteinase 14
+CHEMBL283,Matrix metalloproteinase 3
+CHEMBL4588,Matrix metalloproteinase 8
+CHEMBL321,Matrix metalloproteinase 9
+CHEMBL332,Matrix metalloproteinase-1
+CHEMBL333,Matrix metalloproteinase-2
+CHEMBL344,Melanin-concentrating hormone receptor 1
+CHEMBL1075228,Melanin-concentrating hormone receptor 1
+CHEMBL3795,Melanocortin receptor 1
+CHEMBL4644,Melanocortin receptor 3
+CHEMBL259,Melanocortin receptor 4
+CHEMBL3719,Melanocortin receptor 4
+CHEMBL4608,Melanocortin receptor 5
+CHEMBL1945,Melatonin receptor 1A
+CHEMBL1946,Melatonin receptor 1B
+CHEMBL4477,Metabotropic glutamate receptor 1
+CHEMBL3772,Metabotropic glutamate receptor 1
+CHEMBL2851,Metabotropic glutamate receptor 2
+CHEMBL5137,Metabotropic glutamate receptor 2
+CHEMBL3067,Metabotropic glutamate receptor 3
+CHEMBL2736,Metabotropic glutamate receptor 4
+CHEMBL2787,Metabotropic glutamate receptor 4
+CHEMBL2564,Metabotropic glutamate receptor 5
+CHEMBL3227,Metabotropic glutamate receptor 5
+CHEMBL3423,Methionine aminopeptidase
+CHEMBL3922,Methionine aminopeptidase 2
+CHEMBL2802,Microbial collagenase
+CHEMBL2569,Microsomal triglyceride transfer protein large subunit
+CHEMBL1994,Mineralocorticoid receptor
+CHEMBL5518,Misshapen-like kinase 1
+CHEMBL5888,Mitogen-activated protein kinase kinase kinase 14
+CHEMBL5285,Mitogen-activated protein kinase kinase kinase 5
+CHEMBL5330,Mitogen-activated protein kinase kinase kinase kinase 2
+CHEMBL6166,Mitogen-activated protein kinase kinase kinase kinase 4
+CHEMBL3358,Monoamine oxidase A
+CHEMBL1951,Monoamine oxidase A
+CHEMBL2756,Monoamine oxidase B
+CHEMBL2039,Monoamine oxidase B
+CHEMBL2993,Monoamine oxidase B
+CHEMBL4191,Monoglyceride lipase
+CHEMBL270,Mu opioid receptor
+CHEMBL2858,Mu opioid receptor
+CHEMBL4354,Mu opioid receptor
+CHEMBL233,Mu opioid receptor
+CHEMBL3004,Multidrug resistance-associated protein 1
+CHEMBL216,Muscarinic acetylcholine receptor M1
+CHEMBL276,Muscarinic acetylcholine receptor M1
+CHEMBL4781,Muscarinic acetylcholine receptor M2
+CHEMBL309,Muscarinic acetylcholine receptor M2
+CHEMBL211,Muscarinic acetylcholine receptor M2
+CHEMBL245,Muscarinic acetylcholine receptor M3
+CHEMBL5498,Muscarinic acetylcholine receptor M3
+CHEMBL1821,Muscarinic acetylcholine receptor M4
+CHEMBL2035,Muscarinic acetylcholine receptor M5
+CHEMBL1250348,Myc proto-oncogene protein
+CHEMBL2034805,N-acylethanolamine-hydrolyzing acid amidase
+CHEMBL5646,N-formyl peptide receptor 3
+CHEMBL4506,NAD-dependent deacetylase sirtuin 1
+CHEMBL4462,NAD-dependent deacetylase sirtuin 2
+CHEMBL3768,Neprilysin
+CHEMBL3369,Neprilysin
+CHEMBL2815,Nerve growth factor receptor Trk-A
+CHEMBL2051,Neuraminidase
+CHEMBL6135,Neuraminidase
+CHEMBL3377,Neuraminidase
+CHEMBL4027,Neurokinin 1 receptor
+CHEMBL3942,Neurokinin 1 receptor
+CHEMBL249,Neurokinin 1 receptor
+CHEMBL2327,Neurokinin 2 receptor
+CHEMBL4554,Neurokinin 2 receptor
+CHEMBL4429,Neurokinin 3 receptor
+CHEMBL4980,Neuronal acetylcholine receptor protein alpha-7 subunit
+CHEMBL2492,Neuronal acetylcholine receptor protein alpha-7 subunit
+CHEMBL4777,Neuropeptide Y receptor type 1
+CHEMBL4018,Neuropeptide Y receptor type 2
+CHEMBL4561,Neuropeptide Y receptor type 5
+CHEMBL4123,Neurotensin receptor 1
+CHEMBL4898,Neurotrophic tyrosine kinase receptor type 2
+CHEMBL1744525,Nicotinamide phosphoribosyltransferase
+CHEMBL5221,Nischarin
+CHEMBL4481,"Nitric oxide synthase, inducible"
+CHEMBL3464,"Nitric oxide synthase, inducible"
+CHEMBL3568,"Nitric-oxide synthase, brain"
+CHEMBL3048,"Nitric-oxide synthase, brain"
+CHEMBL4803,"Nitric-oxide synthase, endothelial"
+CHEMBL2014,Nociceptin receptor
+CHEMBL3307224,Nonstructural protein 5A
+CHEMBL222,Norepinephrine transporter
+CHEMBL304,Norepinephrine transporter
+CHEMBL1293269,NS3
+CHEMBL5608,NT-3 growth factor receptor
+CHEMBL1741186,Nuclear receptor ROR-gamma
+CHEMBL1293222,Nucleotide-binding oligomerization domain-containing protein 1
+CHEMBL1293266,Nucleotide-binding oligomerization domain-containing protein 2
+CHEMBL3638334,Opioid growth factor receptor-like protein 1
+CHEMBL1075232,Orexin receptor 1
+CHEMBL5113,Orexin receptor 1
+CHEMBL4792,Orexin receptor 2
+CHEMBL2049,Oxytocin receptor
+CHEMBL3996,Oxytocin receptor
+CHEMBL4302,P-glycoprotein 1
+CHEMBL5378,P-selectin
+CHEMBL2998,P2X purinoceptor 3
+CHEMBL4824,P2X purinoceptor 3
+CHEMBL4805,P2X purinoceptor 7
+CHEMBL2496,P2X purinoceptor 7
+CHEMBL5023,p53-binding protein Mdm-2
+CHEMBL2714,Pepsin A
+CHEMBL1795101,Peptide deformylase
+CHEMBL2593,Peptide N-myristoyltransferase 1
+CHEMBL2288,Peptidyl-prolyl cis-trans isomerase NIMA-interacting 1
+CHEMBL4552,Peripheral-type benzodiazepine receptor
+CHEMBL239,Peroxisome proliferator-activated receptor alpha
+CHEMBL3979,Peroxisome proliferator-activated receptor delta
+CHEMBL235,Peroxisome proliferator-activated receptor gamma
+CHEMBL2331,Phenylethanolamine N-methyltransferase
+CHEMBL4409,Phosphodiesterase 10A
+CHEMBL2652,Phosphodiesterase 2A
+CHEMBL275,Phosphodiesterase 4B
+CHEMBL288,Phosphodiesterase 4D
+CHEMBL3478,Phosphodiesterase 5A
+CHEMBL2304402,Phosphodiesterase 5A
+CHEMBL1827,Phosphodiesterase 5A
+CHEMBL3012,Phosphodiesterase 7A
+CHEMBL3535,Phosphodiesterase 9A
+CHEMBL3474,Phospholipase A2 group IIA
+CHEMBL2536,Phospholipase D1
+CHEMBL4295521,Phosphotyrosine protein phosphatase
+CHEMBL4374,Photoreceptor-specific nuclear receptor
+CHEMBL4005,PI3-kinase p110-alpha subunit
+CHEMBL3145,PI3-kinase p110-beta subunit
+CHEMBL3130,PI3-kinase p110-delta subunit
+CHEMBL3267,PI3-kinase p110-gamma subunit
+CHEMBL2000,Plasma kallikrein
+CHEMBL4687,Plasmepsin 1
+CHEMBL1801,Plasminogen
+CHEMBL3475,Plasminogen activator inhibitor-1
+CHEMBL5136,Platelet activating factor receptor
+CHEMBL250,Platelet activating factor receptor
+CHEMBL2007,Platelet-derived growth factor receptor alpha
+CHEMBL1913,Platelet-derived growth factor receptor beta
+CHEMBL3105,Poly [ADP-ribose] polymerase-1
+CHEMBL1795143,Poly(ADP-ribose) glycohydrolase
+CHEMBL1169598,Polymerase acidic protein
+CHEMBL3401,Pregnane X receptor
+CHEMBL1255164,Probable protein-cysteine N-palmitoyltransferase porcupine
+CHEMBL208,Progesterone receptor
+CHEMBL3988609,Prokineticin receptor 1
+CHEMBL3638342,Prokineticin receptor 2
+CHEMBL3202,Prolyl endopeptidase
+CHEMBL5658,Prostaglandin E synthase
+CHEMBL4411,Prostaglandin E synthase 2
+CHEMBL4427,Prostanoid DP receptor
+CHEMBL5068,Prostanoid EP1 receptor
+CHEMBL1811,Prostanoid EP1 receptor
+CHEMBL2181,Prostanoid EP1 receptor
+CHEMBL1881,Prostanoid EP2 receptor
+CHEMBL2488,Prostanoid EP2 receptor
+CHEMBL3710,Prostanoid EP3 receptor
+CHEMBL4336,Prostanoid EP3 receptor
+CHEMBL1836,Prostanoid EP4 receptor
+CHEMBL1995,Prostanoid IP receptor
+CHEMBL2366517,Protease
+CHEMBL4662,Proteasome Macropain subunit MB1
+CHEMBL299,Protein kinase C alpha
+CHEMBL3045,Protein kinase C beta
+CHEMBL2996,Protein kinase C delta
+CHEMBL3582,Protein kinase C epsilon
+CHEMBL3616,Protein kinase C eta
+CHEMBL2938,Protein kinase C gamma
+CHEMBL2598,Protein kinase C iota
+CHEMBL3863,Protein kinase C mu
+CHEMBL2595,Protein kinase C nu
+CHEMBL3920,Protein kinase C theta
+CHEMBL3438,Protein kinase C zeta
+CHEMBL3032,Protein kinase N2
+CHEMBL1255126,Protein Mdm4
+CHEMBL1741171,Protein RecA
+CHEMBL5469,Protein tyrosine kinase 2 beta
+target_chembl_id,protein_name
+CHEMBL3308976,Protein-glutamine gamma-glutamyltransferase
+CHEMBL335,Protein-tyrosine phosphatase 1B
+CHEMBL3864,Protein-tyrosine phosphatase 2C
+CHEMBL4691,Proteinase activated receptor 4
+CHEMBL3974,Proteinase-activated receptor 1
+CHEMBL4977,Proto-oncogene c-JUN
+CHEMBL5331,Proto-oncogene tyrosine-protein kinase MER
+CHEMBL5568,Proto-oncogene tyrosine-protein kinase ROS
+CHEMBL5228,"Pteridine reductase, putative"
+CHEMBL4338,Purine nucleoside phosphorylase
+CHEMBL4315,Purinergic receptor P2Y1
+CHEMBL2001,Purinergic receptor P2Y12
+CHEMBL4398,Purinergic receptor P2Y2
+CHEMBL4766,Pyruvate dehydrogenase kinase isoform 1
+CHEMBL3623,Quinone reductase 1
+CHEMBL1824,Receptor protein-tyrosine kinase erbB-2
+CHEMBL3009,Receptor protein-tyrosine kinase erbB-4
+CHEMBL5464,Receptor-interacting serine/threonine-protein kinase 1
+CHEMBL2626,Renal dipeptidase
+CHEMBL286,Renin
+CHEMBL2055,Retinoic acid receptor alpha
+CHEMBL2008,Retinoic acid receptor beta
+CHEMBL2003,Retinoic acid receptor gamma
+CHEMBL2061,Retinoid X receptor alpha
+CHEMBL3231,Rho-associated protein kinase 1
+CHEMBL2973,Rho-associated protein kinase 2
+CHEMBL4501,Ribosomal protein S6 kinase 1
+CHEMBL2553,Ribosomal protein S6 kinase alpha 1
+CHEMBL2345,Ribosomal protein S6 kinase alpha 3
+CHEMBL4237,Ribosomal protein S6 kinase alpha 5
+CHEMBL3890,Selectin E
+CHEMBL3988583,Sepiapterin reductase
+CHEMBL5769,Seprase
+CHEMBL3981,Serine/threonine-protein kinase 10
+CHEMBL4525,Serine/threonine-protein kinase 17A
+CHEMBL4282,Serine/threonine-protein kinase AKT
+CHEMBL2431,Serine/threonine-protein kinase AKT2
+CHEMBL4816,Serine/threonine-protein kinase AKT3
+CHEMBL4722,Serine/threonine-protein kinase Aurora-A
+CHEMBL2185,Serine/threonine-protein kinase Aurora-B
+CHEMBL3935,Serine/threonine-protein kinase Aurora-C
+CHEMBL5145,Serine/threonine-protein kinase B-raf
+CHEMBL4630,Serine/threonine-protein kinase Chk1
+CHEMBL2527,Serine/threonine-protein kinase Chk2
+CHEMBL4900,Serine/threonine-protein kinase D2
+CHEMBL4516,Serine/threonine-protein kinase MRCK-A
+CHEMBL4708,Serine/threonine-protein kinase MST2
+CHEMBL2842,Serine/threonine-protein kinase mTOR
+CHEMBL5855,Serine/threonine-protein kinase Nek1
+CHEMBL3835,Serine/threonine-protein kinase NEK2
+CHEMBL4600,Serine/threonine-protein kinase PAK 1
+CHEMBL4482,Serine/threonine-protein kinase PAK 4
+CHEMBL2147,Serine/threonine-protein kinase PIM1
+CHEMBL4523,Serine/threonine-protein kinase PIM2
+CHEMBL5407,Serine/threonine-protein kinase PIM3
+CHEMBL3024,Serine/threonine-protein kinase PLK1
+CHEMBL4897,Serine/threonine-protein kinase PLK3
+CHEMBL3788,Serine/threonine-protein kinase PLK4
+CHEMBL5818,Serine/threonine-protein kinase PRKX
+CHEMBL1906,Serine/threonine-protein kinase RAF
+CHEMBL2343,Serine/threonine-protein kinase Sgk1
+CHEMBL5794,Serine/threonine-protein kinase Sgk2
+CHEMBL4375,Serine/threonine-protein kinase SRPK1
+CHEMBL5261,Serine/threonine-protein kinase TAO1
+CHEMBL5408,Serine/threonine-protein kinase TBK1
+CHEMBL1163101,Serine/threonine-protein kinase/endoribonuclease IRE1
+CHEMBL273,Serotonin 1a (5-HT1a) receptor
+CHEMBL214,Serotonin 1a (5-HT1a) receptor
+CHEMBL1898,Serotonin 1b (5-HT1b) receptor
+CHEMBL3459,Serotonin 1b (5-HT1b) receptor
+CHEMBL1983,Serotonin 1d (5-HT1d) receptor
+CHEMBL322,Serotonin 2a (5-HT2a) receptor
+CHEMBL224,Serotonin 2a (5-HT2a) receptor
+CHEMBL1833,Serotonin 2b (5-HT2b) receptor
+CHEMBL323,Serotonin 2b (5-HT2b) receptor
+CHEMBL324,Serotonin 2c (5-HT2c) receptor
+CHEMBL225,Serotonin 2c (5-HT2c) receptor
+CHEMBL1899,Serotonin 3a (5-HT3a) receptor
+CHEMBL1875,Serotonin 4 (5-HT4) receptor
+CHEMBL4317,Serotonin 4 (5-HT4) receptor
+CHEMBL5017,Serotonin 4 (5-HT4) receptor
+CHEMBL3426,Serotonin 5a (5-HT5a) receptor
+CHEMBL3371,Serotonin 6 (5-HT6) receptor
+CHEMBL3155,Serotonin 7 (5-HT7) receptor
+CHEMBL313,Serotonin transporter
+CHEMBL228,Serotonin transporter
+CHEMBL1741219,Short transient receptor potential channel 4
+CHEMBL3602,Sigma opioid receptor
+CHEMBL287,Sigma opioid receptor
+CHEMBL4153,Sigma-1 receptor
+CHEMBL4026,Signal transducer and activator of transcription 3
+CHEMBL5971,Smoothened homolog
+CHEMBL6080,Smoothened homolog
+CHEMBL5545,Sn1-specific diacylglycerol lipase alpha
+CHEMBL4296,Sodium channel protein type IX alpha subunit
+CHEMBL1980,Sodium channel protein type V alpha subunit
+CHEMBL4979,Sodium/glucose cotransporter 1
+CHEMBL3884,Sodium/glucose cotransporter 2
+CHEMBL2577,Sodium/hydrogen exchanger 1
+CHEMBL3273,Sodium/hydrogen exchanger 3
+CHEMBL3879842,Sodium/hydrogen exchanger 3
+CHEMBL3392948,Solute carrier family 40 member 1
+CHEMBL4523462,Solute carrier family 40 member 1
+CHEMBL4652,Somatostatin receptor 1
+CHEMBL1804,Somatostatin receptor 2
+CHEMBL2028,Somatostatin receptor 3
+CHEMBL1792,Somatostatin receptor 5
+CHEMBL5387,Sonic hedgehog protein
+CHEMBL4333,Sphingosine 1-phosphate receptor Edg-1
+CHEMBL3892,Sphingosine 1-phosphate receptor Edg-3
+CHEMBL2955,Sphingosine 1-phosphate receptor Edg-5
+CHEMBL4394,Sphingosine kinase 1
+CHEMBL3023,Sphingosine kinase 2
+CHEMBL3338,Squalene synthetase
+CHEMBL3815,Squalene synthetase
+CHEMBL1936,Stem cell growth factor receptor
+CHEMBL3559,Steryl-sulfatase
+CHEMBL1293228,Streptokinase A
+CHEMBL3807,T-cell protein-tyrosine phosphatase
+CHEMBL6164,Tankyrase-1
+CHEMBL6154,Tankyrase-2
+CHEMBL3988599,Taste receptor type 2 member 8
+CHEMBL2916,Telomerase reverse transcriptase
+CHEMBL4439,TGF-beta receptor type I
+CHEMBL3392,Thermolysin
+CHEMBL4471,Thrombin
+CHEMBL204,Thrombin
+CHEMBL1864,Thrombopoietin receptor
+CHEMBL3156,Thromboxane A2 receptor
+CHEMBL2069,Thromboxane A2 receptor
+CHEMBL4028,Thromboxane-A synthase
+CHEMBL1835,Thromboxane-A synthase
+CHEMBL3415,Thymidine kinase
+CHEMBL1820,Thymidine kinase
+CHEMBL3106,Thymidine phosphorylase
+CHEMBL2361,Thymidylate kinase
+CHEMBL5328,Thymidylate synthase
+CHEMBL6137,Thymidylate synthase
+CHEMBL1952,Thymidylate synthase
+CHEMBL3160,Thymidylate synthase
+CHEMBL1947,Thyroid hormone receptor beta-1
+CHEMBL1873,Tissue-type plasminogen activator
+CHEMBL1825,TNF-alpha
+CHEMBL5936,Toll-like receptor 7
+CHEMBL5805,Toll-like receptor 8
+CHEMBL4908,Trace amine-associated receptor 1
+CHEMBL5857,Trace amine-associated receptor 1
+CHEMBL2176813,Trace amine-associated receptor 7b
+CHEMBL6007,Transient receptor potential cation channel subfamily A member 1
+CHEMBL1667665,Transient receptor potential M8 protein
+CHEMBL3712907,Transmembrane domain-containing protein TMIGD3
+CHEMBL1795139,Transmembrane protease serine 6
+CHEMBL6184,Transporter
+CHEMBL3194,Transthyretin
+CHEMBL5131,Trypanothione reductase
+CHEMBL3769,Trypsin I
+CHEMBL209,Trypsin I
+CHEMBL2617,Tryptase beta-1
+CHEMBL227,Type-1 angiotensin II receptor
+CHEMBL263,Type-1B angiotensin II receptor
+CHEMBL3318,Tyrosinase
+CHEMBL4599,Tyrosine kinase non-receptor protein 2
+CHEMBL1862,Tyrosine-protein kinase ABL
+CHEMBL4014,Tyrosine-protein kinase ABL2
+CHEMBL2250,Tyrosine-protein kinase BLK
+CHEMBL4601,Tyrosine-protein kinase BRK
+CHEMBL5251,Tyrosine-protein kinase BTK
+CHEMBL3982,Tyrosine-protein kinase FER
+CHEMBL4454,Tyrosine-protein kinase FGR
+CHEMBL4223,Tyrosine-protein kinase FRK
+CHEMBL1841,Tyrosine-protein kinase FYN
+CHEMBL3234,Tyrosine-protein kinase HCK
+CHEMBL2959,Tyrosine-protein kinase ITK/TSK
+CHEMBL2835,Tyrosine-protein kinase JAK1
+CHEMBL2971,Tyrosine-protein kinase JAK2
+CHEMBL2148,Tyrosine-protein kinase JAK3
+CHEMBL258,Tyrosine-protein kinase LCK
+CHEMBL3905,Tyrosine-protein kinase Lyn
+CHEMBL1974,Tyrosine-protein kinase receptor FLT3
+CHEMBL2041,Tyrosine-protein kinase receptor RET
+CHEMBL5314,Tyrosine-protein kinase receptor TYRO3
+CHEMBL4895,Tyrosine-protein kinase receptor UFO
+CHEMBL3655,Tyrosine-protein kinase SRC
+CHEMBL267,Tyrosine-protein kinase SRC
+CHEMBL5703,Tyrosine-protein kinase Srms
+CHEMBL2599,Tyrosine-protein kinase SYK
+CHEMBL4128,Tyrosine-protein kinase TIE-2
+CHEMBL4367,Tyrosine-protein kinase TXK
+CHEMBL3553,Tyrosine-protein kinase TYK2
+CHEMBL2073,Tyrosine-protein kinase YES
+CHEMBL2803,Tyrosine-protein kinase ZAP-70
+CHEMBL5244,UDP-3-O-acyl-GlcNAc deacetylase
+CHEMBL5631,Uncharacterized protein Rv1284/MT1322
+CHEMBL3286,Urokinase-type plasminogen activator
+CHEMBL3764,Urotensin II receptor
+CHEMBL5102,Vanilloid receptor
+CHEMBL4794,Vanilloid receptor
+CHEMBL1868,Vascular endothelial growth factor receptor 1
+CHEMBL279,Vascular endothelial growth factor receptor 2
+CHEMBL1955,Vascular endothelial growth factor receptor 3
+CHEMBL1889,Vasopressin V1a receptor
+CHEMBL2868,Vasopressin V1a receptor
+CHEMBL1921,Vasopressin V1b receptor
+CHEMBL1790,Vasopressin V2 receptor
+CHEMBL4767,Vesicular acetylcholine transporter
+CHEMBL1977,Vitamin D receptor
+CHEMBL2366456,Voltage-dependent L-type calcium channel subunit alpha-1C
+CHEMBL2830,Voltage-gated L-type calcium channel alpha-1C subunit
+CHEMBL4132,Voltage-gated L-type calcium channel alpha-1D subunit
+CHEMBL4633,Voltage-gated potassium channel subunit Kv1.3
+CHEMBL4306,Voltage-gated potassium channel subunit Kv1.5
+CHEMBL4641,Voltage-gated T-type calcium channel alpha-1G subunit
+CHEMBL3649,Xanthine dehydrogenase
+CHEMBL4117,Zinc aminopeptidase
+CHEMBL1293319,Zinc finger protein mex-5

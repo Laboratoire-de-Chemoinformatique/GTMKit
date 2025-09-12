@@ -733,7 +733,7 @@ class VanillaGTM(BaseGTM, ABC):
             x = self._standardize(x, with_mean=True, with_std=True)
         distance = self.kernel(self.phi @ self.weights, x)
         responsibilities, llhs = self.e_step(x, distance)
-        return responsibilities, llhs
+        return responsibilities.T, llhs
 
     def transform(self, data: torch.Tensor) -> torch.Tensor:
         """
@@ -751,7 +751,7 @@ class VanillaGTM(BaseGTM, ABC):
         """
         responsibilities, _ = self.project(data)
         # Return the mean of the posterior distribution
-        return responsibilities.T @ self.nodes
+        return responsibilities @ self.nodes
 
     def fit_transform(self, data: torch.Tensor) -> torch.Tensor:
         """

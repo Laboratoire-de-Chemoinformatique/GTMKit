@@ -5,7 +5,7 @@ description = "A Python library for exploring chemical space using Generative To
 authors = [
     {name = "Tagir Akhmetshin, Louis Plyer, Alexey Orlov, Alexandre Varnek", email = "varnek@unistra.fr"},
 ]
-dependencies = ["numpy>=2.3.2", "torch>=2.7.1", "pandas>=2.3.2", "altair>=5.5.0", "plotly>=6.3.0", "scikit-learn>=1.7.1", "tqdm>=4.67.1"]
+dependencies = ["numpy>=2.3.2", "torch>=2.7.1", "pandas>=2.3.2", "altair>=5.5.0", "plotly>=6.3.0", "scikit-learn>=1.7.1", "tqdm>=4.67.1", "jupyterlab>=4.4.7", "ipywidgets>=8.1.7", "anywidget>=0.9.18", "pyarrow>=21.0.0"]
 requires-python = ">=3.11"
 readme = "README.md"
 license = {text = "MIT"}
